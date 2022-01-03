@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="Hamborger with fries"
         tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="40dp" />
+        tools:layout_editor_absoluteY="40dp"/>
 
     <ImageView
         android:id="@+id/imageView6"

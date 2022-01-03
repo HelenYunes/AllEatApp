@@ -62,11 +62,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.AllMenuViewHol
         ImageView allMenuImage;
         public AllMenuViewHolder(@NonNull View itemView) {
             super(itemView);
-            allMenuName = itemView.findViewById(R.id.all_menu_name);
+       //     allMenuName = itemView.findViewById(R.id.all_menu_name);
            // allMenuNote = itemView.findViewById(R.id.all_menu_note);
            // allMenuRating = itemView.findViewById(R.id.all_menu_rating);//TO DO
-            allMenuPrice = itemView.findViewById(R.id.all_menu_price);
-            allMenuImage = itemView.findViewById(R.id.all_menu_image);
+         //   allMenuPrice = itemView.findViewById(R.id.all_menu_price);
+        //    allMenuImage = itemView.findViewById(R.id.all_menu_image);
         }
     }
 }
