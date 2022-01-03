@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.alleat.RestaurantSide.LoginPage;
 
-
+#git test
 public class  MainActivity extends AppCompatActivity {
     Button ServiceRegButton;
     Button ServiceRegButton2;
