@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AllEat</string>
+    <string name="slogan">Order Eat Pay with AllEat - </string>
+    <string name="textview">TextView</string>
+    <string name="description">description</string>
+    <string name="producturl">producturl</string>
+    <string name="price">price</string>
+    <string name="product">product</string>
+    <string name="add_product">add_product</string>
+    <string name="customer">Customer</string>
+    <string name="service_provider">Service Provider</string>
+    <string name="paybox_url">paybox url</string>
+    <string name="helen">Helen</string>
+    <string name="name">Name</string>
+    <string name="_1234">1234</string>
+    <string name="phone">phone</string>
+    <string name="password">password</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginRight="8dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/all_menu_image"
+        android:layout_width="86dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/popular1" />
+
+    <TextView
+        android:id="@+id/all_menu_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hamborger"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/all_menu_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hamborger with fries"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_mdi_star_rate"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/all_menu_rating"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="2.3"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+
+    <TextView
+        android:id="@+id/all_menu_deliverytime"
+        android:layout_width="85dp"
+        android:layout_height="32dp"
+        android:background="@drawable/time_bg"
+        android:gravity="center"
+        android:text="25 mins"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="246dp"
+        android:layout_height="54dp"
+        android:background="@drawable/add_to_cart_bg"
+        android:text="checkout"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="610dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
