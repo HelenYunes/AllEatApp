@@ -3,14 +3,13 @@ package com.example.alleat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.alleat.RestaurantSide.LoginPage;
-import com.example.alleat.RestaurantSide.SignIn;
+import com.example.alleat.CustomerSide.LoginPage;
+import com.example.alleat.CustomerSide.SignIn;
 
 public class SecondScreen extends AppCompatActivity {
     Button SignUpButton;

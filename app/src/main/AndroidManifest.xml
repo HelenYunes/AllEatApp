@@ -12,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllEat">
         <activity
+            android:name=".MainActivity3FoodMenu"
+            android:exported="false" />
+        <activity
             android:name=".SecondScreen"
             android:exported="false" />
         <activity
             android:name=".SecondScreenForRes"
             android:exported="false" />
         <activity
-            android:name=".RestaurantSide.SignIn"
+            android:name=".CustomerSide.SignIn"
             android:exported="false" />
         <activity
             android:name=".RestaurantSide.SignInForRes"
@@ -32,7 +35,7 @@
             android:name=".RestaurantSide.Restaurant"
             android:exported="true" />
         <activity
-            android:name=".RestaurantSide.LoginPage"
+            android:name=".CustomerSide.LoginPage"
             android:exported="true" />
         <activity
             android:name=".RestaurantSide.RegPageRes"

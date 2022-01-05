@@ -5,13 +5,15 @@ public class RestaurantUser {
     private String phone;
     private String password;
     private String payBoxUrl;
+    private String imageUrl;
     //private boolean isRes;
 
-    public RestaurantUser(String name, String password, String phone, String payBoxUrl) {
+    public RestaurantUser(String name, String password, String phone, String payBoxUrl,String imageUrl) {
         this.name = name;
         this.password = password;
         this.payBoxUrl=payBoxUrl;
         this.phone=phone;
+        this.imageUrl=imageUrl;
         //   boolean isRes;
     }
     public RestaurantUser() {
@@ -44,5 +46,13 @@ public class RestaurantUser {
 
     public void setPayBoxUrl(String payBoxUrl) {
         this.payBoxUrl = payBoxUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

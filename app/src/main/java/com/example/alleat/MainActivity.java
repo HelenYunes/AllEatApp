@@ -3,15 +3,10 @@ package com.example.alleat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.example.alleat.RestaurantSide.LoginPage;
-
-import java.lang.reflect.Type;
 
 public class  MainActivity extends AppCompatActivity {
     Button ServiceRegButton;

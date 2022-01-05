@@ -8,9 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.alleat.RestaurantSide.LoginPage;
 import com.example.alleat.RestaurantSide.RegPageRes;
-import com.example.alleat.RestaurantSide.SignIn;
+import com.example.alleat.CustomerSide.SignIn;
 
 public class SecondScreenForRes extends AppCompatActivity {
     Button SignUpButton;

@@ -1,4 +1,4 @@
-package com.example.alleat.RestaurantSide;
+package com.example.alleat.CustomerSide;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -42,7 +42,9 @@ public class SignIn extends AppCompatActivity  {
                 final ProgressDialog allEatDialog = new ProgressDialog(SignIn.this);
                 allEatDialog.setMessage("Please wait a few seconds...");
                 allEatDialog.show();
+
                 tableUser.addValueEventListener(new ValueEventListener() {
+
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
                         //if user exist login

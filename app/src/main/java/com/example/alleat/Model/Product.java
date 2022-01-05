@@ -6,6 +6,7 @@ public class Product {
     private  String imgUrl;
     private  String description;
     private  String rating;
+    private  String restaurant_id;
 
     public Product  (String name, String price, String img, String description) {
         this.name = name;
@@ -13,6 +14,7 @@ public class Product {
         this.imgUrl = img;
         this.description = description;
         this.rating = "4";
+        this.restaurant_id="2";
     }
     public Product() {
 
@@ -61,6 +63,14 @@ public class Product {
 
     public  void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getRestaurant_id() {
+        return restaurant_id;
+    }
+
+    public void setRestaurant_id(String restaurant_id) {
+        this.restaurant_id = restaurant_id;
     }
 }
 

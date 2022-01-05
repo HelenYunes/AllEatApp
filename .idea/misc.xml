@@ -18,6 +18,8 @@
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_login_page.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_main2.xml" value="0.2864583333333333" />
+        <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_main3.xml" value="0.3875" />
+        <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_register_customer.xml" value="0.29791666666666666" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_restaurant.xml" value="0.25" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_restaurant_customer.xml" value="0.3411458333333333" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_second_screen.xml" value="0.33" />
@@ -27,6 +29,7 @@
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/app_bar_main.xml" value="0.3875" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/content_main.xml" value="0.21" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/customer_screen.xml" value="0.264" />
+        <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/food_product.xml" value="0.3875" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/fragment_gallery.xml" value="0.3875" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/fragment_home.xml" value="0.3734375" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/fragment_slideshow.xml" value="0.3734375" />

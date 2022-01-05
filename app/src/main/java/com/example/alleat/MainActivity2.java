@@ -1,5 +1,6 @@
 package com.example.alleat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import com.example.alleat.Common.Common;
 import com.example.alleat.Interface.ItemClickListener;
 import com.example.alleat.Model.Item;
+import com.example.alleat.Model.RestaurantUser;
 import com.example.alleat.ViewHolder.MenuViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -42,6 +44,7 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
     TextView txtFullName;
     RecyclerView recycler_menu;
     RecyclerView.LayoutManager layoutManager;
+    FirebaseRecyclerAdapter<RestaurantUser,MenuViewHolder>adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,7 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
         toolbar.setTitle("Menu");
         setSupportActionBar(toolbar);
         database=FirebaseDatabase.getInstance();
-        food = database.getReference("Product");
+        food = database.getReference("Restaurant");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
@@ -110,17 +113,20 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
     }
 
     private void loadMenu() {
-        FirebaseRecyclerAdapter<Item,MenuViewHolder>adapter=new FirebaseRecyclerAdapter<Item, MenuViewHolder>(Item.class, R.layout.menu_item, MenuViewHolder.class, food) {
+       adapter=new FirebaseRecyclerAdapter<RestaurantUser, MenuViewHolder>(RestaurantUser.class, R.layout.menu_item, MenuViewHolder.class, food) {
 
             @Override
-            protected void populateViewHolder(MenuViewHolder menuViewHolder, Item product, int i) {
+            protected void populateViewHolder(MenuViewHolder menuViewHolder, RestaurantUser product, int i) {
                 menuViewHolder.textMenuName.setText(product.getName());
-                Picasso.with(getBaseContext()).load(product.getImageURL()).into(menuViewHolder.imageView);
-                Item clickItem=product;
+                Picasso.with(getBaseContext()).load(product.getImageUrl()).into(menuViewHolder.imageView);
+                RestaurantUser clickItem=product;
                 menuViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         Toast.makeText(MainActivity2.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+                        Intent foodList = new Intent(MainActivity2.this, MainActivity3FoodMenu.class);
+                        foodList.putExtra("RestaurantId",adapter.getRef(position).getKey());
+                        startActivity(foodList);
                     }
                 });
             }
