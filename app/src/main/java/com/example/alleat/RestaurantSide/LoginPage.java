@@ -23,53 +23,22 @@ public class LoginPage extends AppCompatActivity {
     MaterialEditText phone;
     MaterialEditText password;
     Button regButton;
-    Button SignInButton;
+ //   Button SignInButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         regName = (MaterialEditText) findViewById(R.id.regName);
-        String sRegName = regName.getText().toString();
         password = (MaterialEditText) findViewById(R.id.password);
         phone = (MaterialEditText) findViewById(R.id.phone);
         payBox = (MaterialEditText) findViewById(R.id.payBox);
         regButton = (Button) findViewById(R.id.regButton);
-        SignInButton = (Button) findViewById(R.id.SignInButton);
+
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference tableUser = database.getReference("User");
         final  ProgressDialog allEatDialog = new ProgressDialog(LoginPage.this);
-        SignInButton.setOnClickListener(new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View view) {
 
-                                                allEatDialog.setMessage("Please wait a few seconds...");
-                                                allEatDialog.show();
-                                                tableUser.addValueEventListener(new ValueEventListener() {
-                                                    @Override
-                                                    public void onDataChange(DataSnapshot snapshot) {
-                                                        //if user exist login
-                                                        if (snapshot.child(phone.getText().toString()).exists()) {
-                                                            //  }
-                                                            //Checking if already exists
-                                                            allEatDialog.dismiss();
-                                                            User user = snapshot.child(phone.getText().toString()).getValue(User.class);
-                                                            //user.setName();
-                                                            if (user.getPassword().equals(password.getText().toString())) {
-                                                                Toast.makeText(LoginPage.this, "Sign In successfully!", Toast.LENGTH_LONG).show();
-                                                                Intent restPage= new Intent(LoginPage.this, Restaurant.class);
-                                                                startActivity(restPage);
-                                                            } else {
-                                                                Toast.makeText(LoginPage.this, "Sign In failed!", Toast.LENGTH_LONG).show();
-                                                            }
-                                                        } else {
-                                                            allEatDialog.dismiss();
-                                                            Toast.makeText(LoginPage.this, "User not exist!", Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    }
-
-                                                    @Override
-                                                    public void onCancelled(DatabaseError error) {
-                                                    } });  }} );
 regButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,12 +49,7 @@ allEatDialog.show();
 tableUser.addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
-        //Checking if already exists
-
         //allEatDialog.dismiss();
-
-
-
         if (payBox.getText().toString().split("/").length != 4)
             Toast.makeText(getApplicationContext(), "bad link", Toast.LENGTH_SHORT).show();
         else {

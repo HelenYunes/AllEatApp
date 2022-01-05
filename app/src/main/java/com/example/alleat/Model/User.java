@@ -3,10 +3,17 @@ package com.example.alleat.Model;
 public class User {
     private String name;
     private String password;
+    //private boolean isRes;
 
     public User(String name, String password) {
         this.name = name;
         this.password = password;
+     //   boolean isRes;
+    }
+    public User() {
+        this.name = "";
+        this.password = "";
+       // this.isRes =false;
     }
 
     public String getName() {

@@ -1,48 +1,66 @@
 package com.example.alleat.Model;
 
-class Product {
-    private static String name;
-    private static double price;
-    private static String imgUrl;
-    private static String description;
+public class Product {
+    private  String name;
+    private  String price;
+    private  String imgUrl;
+    private  String description;
+    private  String rating;
 
-    public Product(String name, double price, String img, String description) {
+    public Product  (String name, String price, String img, String description) {
         this.name = name;
         this.price = price;
         this.imgUrl = img;
         this.description = description;
+        this.rating = "4";
+    }
+    public Product() {
+
+    }
+    public Product(String name, String img) {
+        this.name = name;
+        this.imgUrl = img;
+
     }
 
-    public static String getName() {
+    public  String getName() {
         return name;
     }
 
-    public static double getPrice() {
+    public  String getPrice() {
         return price;
     }
 
-    public static String getDescription() {
+    public  String getDescription() {
         return description;
     }
 
-    public static String getImgUrl() {
-        return imgUrl;
+    public  String getImgUrl() {
+        return this.imgUrl;
     }
 
-    public static void setDescription(String description) {
-        Product.description = description;
+    public  String getRating() {
+        return this.rating;
     }
 
-    public static void setImgUrl(String imgUrl) {
-        Product.imgUrl = imgUrl;
+    public  void setDescription(String description) {
+        this.description = description;
     }
 
-    public static void setName(String name) {
-        Product.name = name;
+    public  void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
-    public static void setPrice(double price) {
-        Product.price = price;
+    public  void setRating(String imgUrl) {
+        this.rating = rating;
+    }
+
+    public  void setName(String name) {
+        this.name = name;
+    }
+
+    public  void setPrice(String price) {
+        this.price = price;
     }
 }
 

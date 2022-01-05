@@ -32,6 +32,7 @@ public class AddItemToMENU extends AppCompatActivity {
         name = (MaterialEditText) findViewById(R.id.edit);
         price = (MaterialEditText) findViewById(R.id.edit2);
         id = (MaterialEditText) findViewById(R.id.edit5);
+        id = (MaterialEditText) findViewById(R.id.edit5);
         description = (MaterialEditText) findViewById(R.id.edit4);
         imageURL = (MaterialEditText) findViewById(R.id.edit3);
         addButton = (Button) findViewById(R.id.addItem1);

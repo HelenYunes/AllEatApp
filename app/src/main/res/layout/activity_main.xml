@@ -47,6 +47,7 @@
         android:layout_weight="1"
         android:text="@string/customer"
         android:textColor="@android:color/white"
+        app:buttonColor="@color/btnCustomer"
         app:cornerRadius="4dp"
         app:shadowColor="@android:color/black"
         app:shadowEnabled="true"/>
@@ -63,6 +64,7 @@
             android:layout_weight="1"
             android:text="@string/service_provider"
             android:textColor="@android:color/white"
+            app:buttonColor="@color/btnService"
             app:cornerRadius="4dp"
             app:shadowColor="@android:color/black"
             app:shadowEnabled="true"

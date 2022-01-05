@@ -56,8 +56,8 @@ public class Item {
         this.price = price;
     }
 
-    public int getRating() {
-        return 5;
+    public String getRating() {
+        return "4";
     }
 
 }
