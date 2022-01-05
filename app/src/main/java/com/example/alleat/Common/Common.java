@@ -1,7 +1,7 @@
 package com.example.alleat.Common;
 
-import com.example.alleat.Model.User;
+import com.example.alleat.Model.Customer;
 
 public class Common {
-    public static User cureentUser;
+    public static Customer currentUser;
 }

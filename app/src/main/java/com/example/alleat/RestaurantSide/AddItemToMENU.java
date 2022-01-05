@@ -49,7 +49,7 @@ public class AddItemToMENU extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Item item = new Item(id.getText().toString(),description.getText().toString(),imageURL.getText().toString(),name.getText().toString(), price.getText().toString());
-                        tableProduct.child(id.getText().toString().toString()).setValue(item);
+                        tableProduct.child(id.getText().toString()).setValue(item);
                         //tableProduct.child(price.getText().toString()).setValue(item);
                         Toast.makeText(AddItemToMENU.this, "Product added successfully!", Toast.LENGTH_LONG).show();
                         setContentView(R.layout.item);

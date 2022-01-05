@@ -15,7 +15,13 @@
             android:name=".SecondScreen"
             android:exported="false" />
         <activity
+            android:name=".SecondScreenForRes"
+            android:exported="false" />
+        <activity
             android:name=".RestaurantSide.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantSide.SignInForRes"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
@@ -27,6 +33,9 @@
             android:exported="true" />
         <activity
             android:name=".RestaurantSide.LoginPage"
+            android:exported="true" />
+        <activity
+            android:name=".RestaurantSide.RegPageRes"
             android:exported="true" />
         <activity
             android:name=".RestaurantSide.AddItemToMENU"

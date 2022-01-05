@@ -1,11 +1,8 @@
 package com.example.alleat;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,7 +10,6 @@ import android.widget.Toast;
 import com.example.alleat.Common.Common;
 import com.example.alleat.Interface.ItemClickListener;
 import com.example.alleat.Model.Item;
-import com.example.alleat.Model.Product;
 import com.example.alleat.ViewHolder.MenuViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,10 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -103,7 +96,7 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
 
         View headerView = navigationView.getHeaderView(0);
         txtFullName = (TextView) headerView.findViewById(R.id.txtFullName);
-        txtFullName.setText(Common.cureentUser.getName());
+        txtFullName.setText(Common.currentUser.getName());
 
 
         recycler_menu=(RecyclerView) findViewById(R.id.recycler_m);

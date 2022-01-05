@@ -10,8 +10,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alleat.Common.Common;
+import com.example.alleat.Common.CommonRes;
 import com.example.alleat.MainActivity2;
 import com.example.alleat.Model.Customer;
+import com.example.alleat.Model.RestaurantUser;
 import com.example.alleat.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
-public class SignIn extends AppCompatActivity  {
+public class SignInForRes extends AppCompatActivity {
     MaterialEditText signName, phone;
     MaterialEditText password;
     Button SignInButton;
@@ -28,18 +30,18 @@ public class SignIn extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_customer);
-        signName = (MaterialEditText) findViewById(R.id.regName);
-        password = (MaterialEditText) findViewById(R.id.password);
-        phone = (MaterialEditText) findViewById(R.id.phone_s);
-        SignInButton = (Button) findViewById(R.id.SignInButton);
+        setContentView(R.layout.login_res);
+        signName = (MaterialEditText) findViewById(R.id.regNameRes);
+        password = (MaterialEditText) findViewById(R.id.passwordRes);
+        phone = (MaterialEditText) findViewById(R.id.phone_res);
+        SignInButton = (Button) findViewById(R.id.SignInButtonRes);
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference tableUser = database.getReference("User");
+        final DatabaseReference tableUser = database.getReference("Restaurant");
 
         SignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final ProgressDialog allEatDialog = new ProgressDialog(SignIn.this);
+                final ProgressDialog allEatDialog = new ProgressDialog(SignInForRes.this);
                 allEatDialog.setMessage("Please wait a few seconds...");
                 allEatDialog.show();
                 tableUser.addValueEventListener(new ValueEventListener() {
@@ -49,24 +51,24 @@ public class SignIn extends AppCompatActivity  {
                         if (snapshot.child(phone.getText().toString()).exists()) {
                             //Checking if already exists
                             allEatDialog.dismiss();
-                            Customer user = snapshot.child(phone.getText().toString()).getValue(Customer.class);
+                            RestaurantUser user = snapshot.child(phone.getText().toString()).getValue(RestaurantUser.class);
                             //user.setName();
                             if (user.getPassword().equals(password.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Sign In successfully!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignInForRes.this, "Sign In successfully!", Toast.LENGTH_LONG).show();
 
-                                Intent homePage = new Intent(SignIn.this, MainActivity2.class);
-                                Common.currentUser =user;
+                                Intent homePage = new Intent(SignInForRes.this, Restaurant.class);
+                                CommonRes.currentUser =user;
                                 startActivity(homePage);
                                 finish();
 
                                 //Intent restPage = new Intent(SignIn.this, Restaurant.class);
-                             //   startActivity(restPage);
+                                //   startActivity(restPage);
                             } else {
-                                Toast.makeText(SignIn.this, "Sign In failed!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignInForRes.this, "Sign In failed!", Toast.LENGTH_LONG).show();
                             }
                         } else {
                             allEatDialog.dismiss();
-                            Toast.makeText(SignIn.this, "User not exist!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInForRes.this, "User not exist!", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -78,4 +80,3 @@ public class SignIn extends AppCompatActivity  {
         });
     }
 }
-

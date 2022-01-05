@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import com.example.alleat.Model.User;
+import com.example.alleat.Model.Customer;
 import com.example.alleat.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,7 +58,7 @@ tableUser.addValueEventListener(new ValueEventListener() {
             else if (!payBox.getText().toString().split("/")[2].equals("payboxapp.page.link"))
                 Toast.makeText(getApplicationContext(), "link not of paybox", Toast.LENGTH_SHORT).show();
             else {
-                User user = new User(regName.getText().toString(), password.getText().toString());
+                Customer user = new Customer(regName.getText().toString(), password.getText().toString());
                 tableUser.child(phone.getText().toString()).setValue(user);
                 Toast.makeText(LoginPage.this, "Register successfully!", Toast.LENGTH_LONG).show();
                 //Toast.makeText(LoginPage.this, "Sign In successfully!", Toast.LENGTH_LONG).show();

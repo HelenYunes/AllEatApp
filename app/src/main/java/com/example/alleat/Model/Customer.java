@@ -1,16 +1,16 @@
 package com.example.alleat.Model;
 
-public class User {
+public class Customer {
     private String name;
     private String password;
     //private boolean isRes;
 
-    public User(String name, String password) {
+    public Customer(String name, String password) {
         this.name = name;
         this.password = password;
      //   boolean isRes;
     }
-    public User() {
+    public Customer() {
         this.name = "";
         this.password = "";
        // this.isRes =false;

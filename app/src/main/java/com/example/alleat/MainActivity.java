@@ -35,7 +35,7 @@ public class  MainActivity extends AppCompatActivity {
         ServiceRegButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Reg = new Intent(MainActivity.this, SecondScreen.class);
+                Intent Reg = new Intent(MainActivity.this, SecondScreenForRes.class);
                 startActivity(Reg);
 
             }
