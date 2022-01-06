@@ -54,13 +54,14 @@ public class SignIn extends AppCompatActivity  {
                             Customer user = snapshot.child(phone.getText().toString()).getValue(Customer.class);
                             //user.setName();
                             if (user.getPassword().equals(password.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Sign In successfully!", Toast.LENGTH_LONG).show();
+                                if (user.getPassword().equals(password.getText().toString())){
+                                    Toast.makeText(SignIn.this, "Sign In successfully!", Toast.LENGTH_LONG).show();
 
                                 Intent homePage = new Intent(SignIn.this, MainActivity2.class);
-                                Common.currentUser =user;
+                                Common.currentUser = user;
                                 startActivity(homePage);
                                 finish();
-
+                            }
                                 //Intent restPage = new Intent(SignIn.this, Restaurant.class);
                              //   startActivity(restPage);
                             } else {

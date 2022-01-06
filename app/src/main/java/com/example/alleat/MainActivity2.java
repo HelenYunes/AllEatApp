@@ -68,9 +68,10 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
         //  binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
 
         fab.setOnClickListener(view -> {
-
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+Intent cartIntent = new Intent(MainActivity2.this,Cart.class);
+startActivity(cartIntent);
+           // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+              //      .setAction("Action", null).show();
 
         });
         // DrawerLayout drawer = binding.drawerLayout;

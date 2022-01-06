@@ -4,9 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.alleat.Database.Database;
+import com.example.alleat.Model.Order;
 import com.example.alleat.Model.Product;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,6 +30,7 @@ CollapsingToolbarLayout collapsingToolbarLayout;
 String ProductId = "";
 FirebaseDatabase database;
 DatabaseReference products;
+Product currentProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,19 @@ DatabaseReference products;
 
 
         btnCart= (FloatingActionButton) findViewById(R.id.btnCart);
+        btnCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Database(getBaseContext()).addToCart(new Order(
+                        ProductId,currentProduct.getName(),
+                        "1",currentProduct.getPrice()
+
+                ));
+
+                Toast.makeText(ProductDescription.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         product_image= (ImageView) findViewById(R.id.img_product);
         product_description= (TextView) findViewById(R.id.product_description);
         product_name= (TextView) findViewById(R.id.product_name);
@@ -57,14 +75,14 @@ if (!ProductId.isEmpty()){
         products.child(ProductId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Product product = snapshot.getValue(Product.class);
+                currentProduct = snapshot.getValue(Product.class);
 
-                assert product != null;
-                Picasso.with(getBaseContext()).load(product.getImageURL()).into(product_image);
-                collapsingToolbarLayout.setTitle(product.getName());
-                product_price.setText(product.getPrice());
-                product_name.setText(product.getName());
-                product_description.setText(product.getDescription());
+                assert currentProduct != null;
+                Picasso.with(getBaseContext()).load(currentProduct.getImageURL()).into(product_image);
+                collapsingToolbarLayout.setTitle(currentProduct.getName());
+                product_price.setText(currentProduct.getPrice());
+                product_name.setText(currentProduct.getName());
+                product_description.setText(currentProduct.getDescription());
             }
 
             @Override

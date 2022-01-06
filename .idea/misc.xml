@@ -13,6 +13,7 @@
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/drawable/side_nav_bar.xml" value="0.3824074074074074" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/a.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/a2.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_cart.xml" value="0.24375" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_food_list.xml" value="0.2708333333333333" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_login_customer.xml" value="0.33" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/activity_login_page.xml" value="0.24427083333333333" />
@@ -28,8 +29,10 @@
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/allmenu_recycler_items.xml" value="0.33" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/an.xml" value="0.3203125" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/app_bar_main.xml" value="0.3875" />
+        <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/cart.xml" value="0.24375" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/content_main.xml" value="0.21" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/customer_screen.xml" value="0.264" />
+        <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/edit_item.xml" value="0.3875" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/food_product.xml" value="0.3875" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/fragment_gallery.xml" value="0.3875" />
         <entry key="..\:/Users/helen/AndroidStudioProjects/AllEat/app/src/main/res/layout/fragment_home.xml" value="0.3734375" />

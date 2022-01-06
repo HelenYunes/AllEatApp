@@ -33,10 +33,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/popular1" />
+        />
+    <!--        app:srcCompat="@drawable/popular1"-->
+
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/editItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -52,8 +54,8 @@
         android:layout_width="239dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintStart_toStartOf="@+id/editItemName"
+        app:layout_constraintTop_toBottomOf="@+id/editItemName" />
 
     <TextView
         android:id="@+id/rating"
@@ -66,7 +68,7 @@
         app:layout_constraintTop_toTopOf="@+id/ratingBar" />
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/editItemPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -78,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/editItemDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -87,11 +89,11 @@
         android:text="Hamburger served with with fries."
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/price"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintStart_toStartOf="@+id/editItemPrice"
+        app:layout_constraintTop_toBottomOf="@+id/editItemPrice" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEditItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
