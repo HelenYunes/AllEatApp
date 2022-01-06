@@ -41,12 +41,12 @@ public class ItemPage extends AppCompatActivity {
         ImageView5 = (ImageView)findViewById(R.id.imageView5);
 
 
-        RequestOptions options = new RequestOptions()
-                .centerCrop()
-                .placeholder(R.mipmap.ic_launcher_round)
-                .error(R.mipmap.ic_launcher_round);
-        String imglink = "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300";
-        Glide.with(this).load(imglink).apply(options).into(ImageView5);
+//        RequestOptions options = new RequestOptions()
+//                .centerCrop()
+//                .placeholder(R.mipmap.ic_launcher_round)
+//                .error(R.mipmap.ic_launcher_round);
+//        String imglink = "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300";
+//        Glide.with(this).load(imglink).apply(options).into(ImageView5);
 
 
 
@@ -57,25 +57,6 @@ public class ItemPage extends AppCompatActivity {
 
         String finalParentID = parentID;
 
-
-//        ItemsDataBase.child(finalParentID).child("imageURL").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                String imglink = snapshot.child(finalParentID).child("imageURL").getValue().toString();
-//                RequestOptions options = new RequestOptions()
-//                        .centerCrop()
-//                        .placeholder(R.mipmap.ic_launcher_round)
-//                        .error(R.mipmap.ic_launcher_round);
-//                Glide.with(ItemPage.this).load(imglink).apply(options).into(ImageView5);
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
-
         ItemsDataBase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -85,14 +66,12 @@ public class ItemPage extends AppCompatActivity {
                 EditItemPrice.setText(price);
                 String desc =snapshot.child(finalParentID).child("description").getValue().toString();
                 EditItemDesc.setText(desc);
-
-                //almost working
-//                ImageView5.setImageDrawable();
-
-
-                //take care of continious change in firebase
-//                ImageView5.set
-                //can save rating bar and etc
+                String imglink = snapshot.child(finalParentID).child("imageURL").getValue().toString();
+                RequestOptions options = new RequestOptions()
+                        .centerCrop()
+                        .placeholder(R.mipmap.ic_launcher_round)
+                        .error(R.mipmap.ic_launcher_round);
+                Glide.with(ItemPage.this).load(imglink).apply(options).into(ImageView5);
             }
 
             @Override

@@ -14,6 +14,12 @@
         android:theme="@style/Theme.AllEat"
         tools:replace="android:theme">
         <activity
+            android:name=".RestaurantSide.ItemPage"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantSide.EditItemOnMenu"
+            android:exported="false" />
+        <activity
             android:name=".Cart"
             android:exported="false" />
         <activity

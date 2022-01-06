@@ -1,15 +1,19 @@
 package com.example.alleat;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.alleat.Common.Common;
 import com.example.alleat.Database.Database;
 import com.example.alleat.Model.Order;
+import com.example.alleat.Model.Payment;
 import com.example.alleat.ViewHolder.CartAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -52,7 +56,19 @@ CartAdapter adapter;
 
         
         loadListProductCart();
+        btnPayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            showPaymentDialog();
+
+            }
+        });
     }
+    private void showPaymentDialog(){
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Cart.this);
+        alertDialog.setTitle("");
+    }
+
 
     private void loadListProductCart() {
 
