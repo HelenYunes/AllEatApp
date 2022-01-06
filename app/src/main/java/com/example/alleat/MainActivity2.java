@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 
 import com.example.alleat.Common.Common;
+import com.example.alleat.Common.CommonRes;
 import com.example.alleat.Interface.ItemClickListener;
 import com.example.alleat.Model.Item;
 import com.example.alleat.Model.RestaurantUser;
@@ -56,7 +57,7 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
 
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Menu");
+        toolbar.setTitle("Restaurants");
         setSupportActionBar(toolbar);
         database=FirebaseDatabase.getInstance();
         food = database.getReference("Restaurant");

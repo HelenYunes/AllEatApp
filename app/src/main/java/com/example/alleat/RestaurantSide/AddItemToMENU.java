@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import com.example.alleat.Model.Item;
+import com.example.alleat.Model.Product;
 import com.example.alleat.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,7 +49,7 @@ public class AddItemToMENU extends AppCompatActivity {
 
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        Item item = new Item(id.getText().toString(),description.getText().toString(),imageURL.getText().toString(),name.getText().toString(), price.getText().toString());
+                        Product item = new Product(description.getText().toString(),id.getText().toString(),imageURL.getText().toString(),name.getText().toString(), price.getText().toString());
                         tableProduct.child(id.getText().toString()).setValue(item);
                         //tableProduct.child(price.getText().toString()).setValue(item);
                         Toast.makeText(AddItemToMENU.this, "Product added successfully!", Toast.LENGTH_LONG).show();

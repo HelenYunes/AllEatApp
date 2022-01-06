@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -51,13 +52,16 @@ adapter = new FirebaseRecyclerAdapter<Product, FoodViewHolder>(Product.class,R.l
     @Override
     protected void populateViewHolder(FoodViewHolder menuViewHolder, Product product, int i) {
 menuViewHolder.food_name.setText(product.getName());
-        Picasso.with(getBaseContext()).load(product.getImgUrl()).into(menuViewHolder.food_image);
+        Picasso.with(getBaseContext()).load(product.getImageURL()).into(menuViewHolder.food_image);
 
         final Product local = product;
         menuViewHolder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
                 Toast.makeText(MainActivity3FoodMenu.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
+                Intent productDescription = new Intent(MainActivity3FoodMenu.this,ProductDescription.class);
+                productDescription.putExtra("ProductId",adapter.getRef(position).getKey());
+                startActivity(productDescription);
             }
         });
 
