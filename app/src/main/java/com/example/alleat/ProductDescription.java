@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +41,38 @@ Product currentProduct;
 
         database = FirebaseDatabase.getInstance();
         products = database.getReference("Product");
+
+
+        //only rating side
+        final RatingBar ratingBar = (RatingBar) findViewById(R.id.rateBar);
+        final TextView ratingDisplay = (TextView) findViewById(R.id.ratingDisp);
+        Button ratingSubmit = (Button) findViewById(R.id.subRatingBtn);
+
+        ratingSubmit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                products.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String countC = snapshot.child("2").child("RatingCount").getValue().toString();
+                        Float count = Float.parseFloat(countC) + 1;
+                        products.child("2/RatingCount").setValue(String.valueOf(count));
+                        String sumS = snapshot.child("2").child("RatingSum").getValue().toString();
+                        float sum =Float.parseFloat(sumS) + ratingBar.getRating();
+                        products.child("2/RatingSum").setValue(String.valueOf(sum));
+                        Float div = (Float) (sum/count);
+                        products.child("2/rating").setValue(String.valueOf(div));
+                        ratingDisplay.setText("" +div);
+
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
+        //************************************************
 
 
         btnCart= (FloatingActionButton) findViewById(R.id.btnCart);

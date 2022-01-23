@@ -51,10 +51,6 @@ public class MainActivity2 extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        //  binding = ActivityMain2Binding.inflate(getLayoutInflater());
-        //   setContentView(binding.getRoot());
-
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Restaurants");

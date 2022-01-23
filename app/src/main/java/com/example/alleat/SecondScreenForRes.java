@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alleat.RestaurantSide.RegPageRes;
 import com.example.alleat.CustomerSide.SignIn;
+import com.example.alleat.RestaurantSide.SignInForRes;
 
 public class SecondScreenForRes extends AppCompatActivity {
     Button SignUpButton;
@@ -25,12 +26,9 @@ public class SecondScreenForRes extends AppCompatActivity {
         setContentView(R.layout.activity_second_screen_res);
         SignUpButton = (Button) findViewById(R.id.btnSignUPRes);
         SignInButton = (Button) findViewById(R.id.btnSignIn);
-
         ServiceRegButton2 = (Button) findViewById(R.id.regButton);
         CustomerSignButton2 = (Button) findViewById(R.id.SignInButton);
-
         txtSlogan = (TextView) findViewById(R.id.txtSlogan);
-
         SignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +41,7 @@ public class SecondScreenForRes extends AppCompatActivity {
         SignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sign = new Intent(SecondScreenForRes.this, SignIn.class);
+                Intent sign = new Intent(SecondScreenForRes.this, SignInForRes.class);
                 startActivity(sign);
 
             }

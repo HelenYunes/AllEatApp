@@ -67,7 +67,7 @@ menuViewHolder.food_name.setText(product.getName());
 
     }
 };
-        //Log.d("Tag",""+adapter.getItemCount());
+
 recyclerView.setAdapter(adapter);
 
     }

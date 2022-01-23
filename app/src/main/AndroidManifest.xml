@@ -14,6 +14,9 @@
         android:theme="@style/Theme.AllEat"
         tools:replace="android:theme">
         <activity
+            android:name=".MainActivity3Res"
+            android:exported="false" />
+        <activity
             android:name=".RestaurantSide.ItemPage"
             android:exported="false" />
         <activity
@@ -21,6 +24,9 @@
             android:exported="false" />
         <activity
             android:name=".Cart"
+            android:exported="false" />
+        <activity
+            android:name=".Pa"
             android:exported="false" />
         <activity
             android:name=".ProductDescription"

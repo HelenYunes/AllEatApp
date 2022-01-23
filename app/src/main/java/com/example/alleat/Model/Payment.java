@@ -6,11 +6,13 @@ public class Payment {
 
     private String name;
     private  String total;
+    private String CreditCard;
     private List<Order> foods;
 
-    public Payment(String name, String total, List<Order> foods){
+    public Payment(String name,String CreditCard, String total, List<Order> foods){
 
         this.name = name;
+        this.CreditCard=CreditCard;
         this.total = total;
         this.foods = foods;
     }
@@ -38,5 +40,13 @@ public class Payment {
 
     public void setFoods(List<Order> foods) {
         this.foods = foods;
+    }
+
+    public String getCreditCard() {
+        return CreditCard;
+    }
+
+    public void setCreditCard(String creditCard) {
+        CreditCard = creditCard;
     }
 }
